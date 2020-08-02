@@ -5,12 +5,12 @@ if [ -f ~/.bashrc ]; then
         . ~/.bashrc
 fi
 
-# User specific environment and startup programs
-
-PATH=$PATH:$HOME/.local/bin:$HOME/bin
-
-export PATH
-
 # Additional Config
 
 export GOPATH=$HOME/go
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME
+
+export PATH
