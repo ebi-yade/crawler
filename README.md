@@ -2,10 +2,10 @@
 
 ## Installation
 
-To get started, make sure you have [Terraform installed](https://www.terraform.io/) on your system, and then clone this repository.
+To get started, make sure you have [Docker](https://www.docker.com/get-started) and [Terraform](https://www.terraform.io/) installed on your system, and then clone this repository.
 
 ```sh
-git clone https://github.com/enigolgithub/secrets-aws
+git clone https://github.com/enigolgithub/crawler
 ```
 
 ### Set Variables
