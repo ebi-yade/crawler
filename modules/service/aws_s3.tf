@@ -66,7 +66,7 @@ resource "aws_s3_bucket_public_access_block" "this" {
 resource "aws_s3_bucket_object" "env" {
   bucket     = var.bucket_name
   key        = "dotfiles/.env"
-  source     = "./static/dotfiles/.env"
-  etag       = filemd5("./static/dotfiles/.env")
+  source     = "./assets/dotfiles/.env"
+  etag       = filemd5("./assets/dotfiles/.env")
   depends_on = [aws_s3_bucket.this]
 }

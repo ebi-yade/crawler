@@ -15,7 +15,7 @@ Make files listed below.
 - backup.tf
 - terraform.tfvars
 - .env
-- static/dotfiles/.env
+- assets/dotfiles/.env
 
 ### Initialize Terraform
 
