@@ -5,7 +5,6 @@ services:
         context: .
         dockerfile: ./docker/dev/amazonlinux/Dockerfile
     image: ec2-app:latest
-    #restart: always
     container_name: 'ec2-app'
     working_dir: '/home/ec2-user/'
     tty: true
