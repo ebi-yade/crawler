@@ -10,6 +10,9 @@ services:
     working_dir: '/home/ec2-user/'
     tty: true
     env_file: .env
-    entrypoint: bash -c 'sh /tmp/userdata.sh; bash'
-    #volumes:
-    #  - ./src:/usr/src
+    entrypoint: >
+        bash -c 'APP_ENV=local bash /tmp/userdata.sh && \
+                 source .bash_profile && \
+                 bash'
+    volumes:
+      - ./src:/home/ec2-user/crawler/src
