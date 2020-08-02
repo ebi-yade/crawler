@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -ex
+
+# install git
+sudo yum install -y git
+
+# download project files
+git clone https://github.com/ebi-yade/crawler /home/ec2-user/crawler # clone this repo
+aws s3 cp s3://<your-bucket-name>/secret/.env /home/ec2-user/crawler/.env # get .env on s3 with default encription
+
+# change owner of project directory
+chown -R ec2-user:ec2-user /home/ec2-user/crawler

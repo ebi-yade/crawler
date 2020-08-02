@@ -1,0 +1,10 @@
+__pycache__/
+data/
+.env
+# terraform variable and config files
+.terraform/
+*.tfvars*
+*.tfstate*
+backup.tf
+# userdata shellscript
+script/userdata-*
