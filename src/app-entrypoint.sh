@@ -2,4 +2,5 @@
 
 set -eux
 
-GOOS=linux GOARCH=amd64 go run ./crawler/src/cmd/crawler/main.go
+cd $PROJECT
+GOOS=linux GOARCH=amd64 go run ./cmd/${PROJECT}main.go
