@@ -1,1 +1,1 @@
-output elastic_ip { value = module.service.elastic_ip }
+#output elastic_ip { value = module.service.elastic_ip }

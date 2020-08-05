@@ -1,3 +1,4 @@
+/*
 resource "aws_instance" "this" {
   ami                    = "ami-0a1c2ec61571737db" # Amazon Linux 2: latest at 2020-07-03
   instance_type          = "t2.micro"
@@ -5,11 +6,12 @@ resource "aws_instance" "this" {
   vpc_security_group_ids = [aws_security_group.this.id]
   subnet_id              = var.subnets[0]
   iam_instance_profile   = aws_iam_instance_profile.this.name
-  user_data              = file("./script/userdata-${var.suffix_kebab}.sh")
+  //user_data              = file("./script/userdata-${var.suffix_kebab}.sh")
   tags                   = var.tags
 
   depends_on = [aws_s3_bucket_object.env]
 }
+*/
 
 #####################################
 # SSH Key Pair
@@ -51,6 +53,7 @@ EOF
 #####################################
 # Elastic IP
 #####################################
+/*
 resource "aws_eip" "this" {
   vpc = true
 }
@@ -59,3 +62,4 @@ resource "aws_eip_association" "this" {
   instance_id   = aws_instance.this.id
   allocation_id = aws_eip.this.id
 }
+*/

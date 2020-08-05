@@ -6,5 +6,7 @@ data/
 *.tfvars*
 *.tfstate*
 backup.tf
+# packer config files
+*.pkrvars.hcl
 # userdata shellscript
 script/userdata-*
