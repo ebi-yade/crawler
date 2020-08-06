@@ -20,6 +20,4 @@ runcmd:
   - sed -i 's/.*root:RANDOM/#&/g' /etc/cloud/cloud.cfg.d/99_onprem.cfg
 
   # Install Packages
-  - yum -y update && \
-    yum install -y  git \
-                    golang
+  - yum -y update && yum install -y git golang
