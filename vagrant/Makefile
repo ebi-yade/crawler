@@ -15,7 +15,6 @@ cleanup:
 	chmod 600 insecure.pem && \
 	ssh -p 2222 ec2-user@localhost -i insecure.pem " \
 	sudo rm -rf /var/cache/yum && \
-	sudo dd if=/dev/zero of=/0 bs=4k && \
 	sudo rm -f /0 && \
 	history -c && \
 	sudo shutdown -h now"
