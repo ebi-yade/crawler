@@ -76,5 +76,9 @@ Vagrant.configure("2") do |config|
   # SHELL
   config.vm.provision "shell", run: 'always', privileged: false, inline: <<-SHELL
   cp assets/dotfiles/.bash_profile .bash_profile
+  source .bash_profile
+  cd src
+  go mod download
+  cd ..
   SHELL
 end
