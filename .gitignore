@@ -7,4 +7,6 @@ data/
 *.tfstate*
 backup.tf
 # userdata shellscript
-/terraform/script/userdata-*
+terraform/script/userdata-*
+# source codes
+src
