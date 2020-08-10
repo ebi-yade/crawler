@@ -26,3 +26,7 @@ vagrant-reload:
 	sed -i.bak -e "s/VmBoxNameHere/amzn2-$(PROJECT_NAME)/g" Vagrantfile && \
 	vagrant reload && \
 	cd ..
+terraform-apply:
+	cd terraform && \
+	terraform apply && \
+	cd ..

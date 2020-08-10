@@ -5,7 +5,7 @@ resource "aws_instance" "this" {
   vpc_security_group_ids = [aws_security_group.this.id]
   subnet_id              = var.subnets[0]
   iam_instance_profile   = aws_iam_instance_profile.this.name
-  user_data              = file("./script/userdata-${var.suffix_kebab}.sh")
+  user_data              = file("../scripts/userdata-${var.suffix_kebab}.sh")
   tags                   = var.tags
 
   depends_on = [aws_s3_bucket_object.env]

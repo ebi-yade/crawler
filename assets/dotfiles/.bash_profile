@@ -5,10 +5,6 @@ if [ -f ~/.bashrc ]; then
         . ~/.bashrc
 fi
 
-# Redirect Stdout and Stderr to Docker Host
-#exec 1>/dev/pts/0
-#exec 2>&1
-
 # Golang Config
 
 export GOPATH=$HOME/go
