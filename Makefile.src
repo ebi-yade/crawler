@@ -1,0 +1,11 @@
+vagrant-up:
+	cd ../vagrant && \
+	vagrant up && \
+	cd ../src
+vagrant-ssh:
+	cd ../vagrant && \
+	vagrant ssh
+vagrant-halt:
+	cd ../vagrant && \
+	vagrant halt && \
+	cd ../src
