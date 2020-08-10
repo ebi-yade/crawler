@@ -25,3 +25,7 @@ vagrant-init:
 	vagrant box add --name amzn2-$(PROJECT_NAME) amzn2.box && \
 	vagrant plugin install vagrant-vbguest && \
 	vagrant up
+vagrant-reload:
+	cp Vagrantfile.bak Vagrantfile && \
+	sed -i.bak -e "s/VmBoxNameHere/amzn2-$(PROJECT_NAME)/g" Vagrantfile && \
+	vagrant reload
