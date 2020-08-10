@@ -6,9 +6,6 @@ update:
 	cd src && \
 	git pull origin master && \
 	cd ..
-deploy: 
-	cd terraform && \
-	terraform apply
 vagrant-up:
 	cd vagrant && \
 	vagrant up && \
@@ -29,4 +26,8 @@ vagrant-reload:
 terraform-apply:
 	cd terraform && \
 	terraform apply && \
+	cd ..
+terraform-destroy:
+	cd terraform && \
+	terraform destroy && \
 	cd ..
