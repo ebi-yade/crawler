@@ -1,4 +1,10 @@
 PROJECT_NAME=crawler
+init:
+	git clone https://github.com/ebi-yade/go-crawler src
+update:
+	cd src && \
+	git pull origin master && \
+	cd ..
 deploy: 
 	cd terraform && \
 	terraform apply
