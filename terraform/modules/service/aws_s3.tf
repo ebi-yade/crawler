@@ -66,7 +66,15 @@ resource "aws_s3_bucket_public_access_block" "this" {
 resource "aws_s3_bucket_object" "env" {
   bucket     = var.bucket_name
   key        = "dotfiles/.env"
-  source     = "./assets/dotfiles/.env"
-  etag       = filemd5("./assets/dotfiles/.env")
+  source     = "../assets/dotfiles/.env"
+  etag       = filemd5("../assets/dotfiles/.env")
+  depends_on = [aws_s3_bucket.this]
+}
+
+resource "aws_s3_bucket_object" "bash_profile" {
+  bucket     = var.bucket_name
+  key        = "dotfiles/.bash_profile"
+  source     = "../assets/dotfiles/.bash_profile"
+  etag       = filemd5("../assets/dotfiles/.bash_profile")
   depends_on = [aws_s3_bucket.this]
 }
