@@ -19,9 +19,17 @@ vagrant-halt:
 	cd ..
 vagrant-reload:
 	cd vagrant && \
+	vagrant halt && \
 	cp Vagrantfile.bak Vagrantfile && \
 	sed -i.bak -e "s/VmBoxNameHere/amzn2-$(PROJECT_NAME)/g" Vagrantfile && \
-	vagrant reload --provision && \
+	vagrant up && \
+	cd ..
+vagrant-remake:
+	cd vagrant && \
+	vagrant destroy && \
+	cp Vagrantfile.bak Vagrantfile && \
+	sed -i.bak -e "s/VmBoxNameHere/amzn2-$(PROJECT_NAME)/g" Vagrantfile && \
+	vagrant up && \
 	cd ..
 terraform-apply:
 	cd terraform && \

@@ -26,6 +26,12 @@ vagrant-init:
 	vagrant plugin install vagrant-vbguest && \
 	vagrant up
 vagrant-reload:
+	vagrant halt && \
 	cp Vagrantfile.bak Vagrantfile && \
 	sed -i.bak -e "s/VmBoxNameHere/amzn2-$(PROJECT_NAME)/g" Vagrantfile && \
-	vagrant reload --provision
+	vagrant up
+vagrant-remake:
+	vagrant destroy && \
+	cp Vagrantfile.bak Vagrantfile && \
+	sed -i.bak -e "s/VmBoxNameHere/amzn2-$(PROJECT_NAME)/g" Vagrantfile && \
+	vagrant up
